@@ -10,7 +10,7 @@ import org.apache.xerces.util.XMLChar;
 public class evaluationorder {
    public static void main(String[] args) throws Throwable {
       Map m = new LinkedHashMap();
-       m.put("var1", "\"It uses nothing\"");
+       m.put("var1", "\"It uses nothing at all\"");
        m.put("var2", "\"It uses \"+var7");
        m.put("var3", "\"It uses \"+var1 +\" and \"+var4");
        m.put("var4", "\"It uses nothing again\"");
