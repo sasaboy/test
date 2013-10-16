@@ -1,21 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
-    Together Workflow Editor
-    Copyright (C) 2011 Together Teamsolutions Co., Ltd.
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or 
-    (at your option) any later version.
- 
-    This program is distributed in the hope that it will be useful, 
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
-    GNU General Public License for more details.
- 
-    You should have received a copy of the GNU General Public License
-    along with this program. If not, see http://www.gnu.org/licenses
--->
 <xpdl:Package xmlns:xpdl="http://www.wfmc.org/2008/XPDL2.1" xmlns="http://www.wfmc.org/2008/XPDL2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="document_approval" Name="Document approval" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 http://www.wfmc.org/standards/docs/bpmnxpdl_31.xsd">
     <xpdl:PackageHeader>
         <xpdl:XPDLVersion>2.1</xpdl:XPDLVersion>
@@ -106,21 +89,6 @@
         </xpdl:Pool>
     </xpdl:Pools>
     <xpdl:Associations>
-        <xpdl:Association AssociationDirection="From" Id="document_approval_ass1" Source="create_document" Target="document_approval_art1">
-            <xpdl:Object Id="0" Name=""/>
-            <xpdl:ConnectorGraphicsInfos>
-                <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE">
-                    <xpdl:Coordinates XCoordinate="471" YCoordinate="14"/>
-                    <xpdl:Coordinates XCoordinate="761" YCoordinate="81"/>
-                </xpdl:ConnectorGraphicsInfo>
-            </xpdl:ConnectorGraphicsInfos>
-        </xpdl:Association>
-        <xpdl:Association AssociationDirection="To" Id="document_approval_ass2" Source="document_approval_art1" Target="submit_document">
-            <xpdl:Object Id="0" Name=""/>
-            <xpdl:ConnectorGraphicsInfos>
-                <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
-            </xpdl:ConnectorGraphicsInfos>
-        </xpdl:Association>
         <xpdl:Association AssociationDirection="To" Id="document_approval_ass3" Source="document_approval_art1" Target="review_document">
             <xpdl:Object Id="0" Name=""/>
             <xpdl:ConnectorGraphicsInfos>
@@ -195,40 +163,6 @@
                 </xpdl:DataField>
             </xpdl:DataFields>
             <xpdl:Activities>
-                <xpdl:Activity Id="create_document" Name="Create Document">
-                    <xpdl:Implementation>
-                        <xpdl:No/>
-                    </xpdl:Implementation>
-                    <xpdl:Performers>
-                        <xpdl:Performer>author</xpdl:Performer>
-                    </xpdl:Performers>
-                    <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo BorderColor="0,0,0" FillColor="187,247,190" Height="60" IsVisible="true" LaneId="document_approval_pool1_lan1" ToolId="JaWE" Width="90">
-                            <xpdl:Coordinates XCoordinate="159" YCoordinate="40"/>
-                        </xpdl:NodeGraphicsInfo>
-                    </xpdl:NodeGraphicsInfos>
-                </xpdl:Activity>
-                <xpdl:Activity Id="submit_document" Name="SubmitDocument">
-                    <xpdl:Implementation>
-                        <xpdl:No/>
-                    </xpdl:Implementation>
-                    <xpdl:Performers>
-                        <xpdl:Performer>author</xpdl:Performer>
-                    </xpdl:Performers>
-                    <xpdl:TransitionRestrictions>
-                        <xpdl:TransitionRestriction>
-                            <xpdl:Join Type="Exclusive"/>
-                        </xpdl:TransitionRestriction>
-                    </xpdl:TransitionRestrictions>
-                    <xpdl:ExtendedAttributes>
-                        <xpdl:ExtendedAttribute Name="AssignToPerformerOfActivity" Value="create_document"/>
-                    </xpdl:ExtendedAttributes>
-                    <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo BorderColor="0,0,0" FillColor="187,247,190" Height="60" IsVisible="true" LaneId="document_approval_pool1_lan1" ToolId="JaWE" Width="90">
-                            <xpdl:Coordinates XCoordinate="359" YCoordinate="40"/>
-                        </xpdl:NodeGraphicsInfo>
-                    </xpdl:NodeGraphicsInfos>
-                </xpdl:Activity>
                 <xpdl:Activity Id="final_review_document" Name="Review document">
                     <xpdl:Implementation>
                         <xpdl:No/>
@@ -415,23 +349,8 @@ d;</xpdl:DeadlineDuration>
                 </xpdl:Activity>
             </xpdl:Activities>
             <xpdl:Transitions>
-                <xpdl:Transition From="create_document" Id="publish_doc_Tra2" Name="Transition" To="submit_document">
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_ORTHOGONAL" ToolId="JaWE"/>
-                    </xpdl:ConnectorGraphicsInfos>
-                </xpdl:Transition>
                 <xpdl:Transition From="final_review_document1" Id="publish_doc_Tra7" Name="Transition" To="publish_document">
                     <xpdl:Condition Type="CONDITION">approvedByPublisher</xpdl:Condition>
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_ORTHOGONAL" ToolId="JaWE"/>
-                    </xpdl:ConnectorGraphicsInfos>
-                </xpdl:Transition>
-                <xpdl:Transition From="update_document" Id="publish_doc_Tra12" Name="Transition" To="submit_document">
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_ORTHOGONAL" ToolId="JaWE"/>
-                    </xpdl:ConnectorGraphicsInfos>
-                </xpdl:Transition>
-                <xpdl:Transition From="submit_document" Id="publish_doc_Tra25" Name="Transition" To="review_document">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_ORTHOGONAL" ToolId="JaWE"/>
                     </xpdl:ConnectorGraphicsInfos>
@@ -484,11 +403,6 @@ d;</xpdl:DeadlineDuration>
                         <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" ToolId="JaWE"/>
                     </xpdl:ConnectorGraphicsInfos>
                 </xpdl:Transition>
-                <xpdl:Transition From="document_approval_act1" Id="document_approval_tra3" To="create_document">
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_ORTHOGONAL" ToolId="JaWE"/>
-                    </xpdl:ConnectorGraphicsInfos>
-                </xpdl:Transition>
                 <xpdl:Transition From="publish_document" Id="document_approval_tra4" To="document_approval_act2">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_ORTHOGONAL" ToolId="JaWE"/>
@@ -503,6 +417,6 @@ d;</xpdl:DeadlineDuration>
     <xpdl:ExtendedAttributes>
         <xpdl:ExtendedAttribute Name="JaWE_CONFIGURATION" Value="shark"/>
         <xpdl:ExtendedAttribute Name="EDITING_TOOL" Value="Together Workflow Editor"/>
-        <xpdl:ExtendedAttribute Name="EDITING_TOOL_VERSION" Value="4.9-1-20130211-1113"/>
+        <xpdl:ExtendedAttribute Name="EDITING_TOOL_VERSION" Value="5.1-1-20131016-0834"/>
     </xpdl:ExtendedAttributes>
 </xpdl:Package>
