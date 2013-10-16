@@ -168,40 +168,6 @@
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                 </xpdl:Activity>
-                <xpdl:Activity Id="review_document" Name="Review document">
-                    <xpdl:Implementation>
-                        <xpdl:No/>
-                    </xpdl:Implementation>
-                    <xpdl:Performers>
-                        <xpdl:Performer>author</xpdl:Performer>
-                    </xpdl:Performers>
-                    <xpdl:Deadline Execution="SYNCHR">
-                        <xpdl:DeadlineDuration>var d=new java.util.Date();
-d.setTime(shark_activity_created_time.getTime()+60000);
-d;</xpdl:DeadlineDuration>
-                        <xpdl:ExceptionName>timeout</xpdl:ExceptionName>
-                    </xpdl:Deadline>
-                    <xpdl:TransitionRestrictions>
-                        <xpdl:TransitionRestriction>
-                            <xpdl:Split Type="Parallel">
-                                <xpdl:TransitionRefs>
-                                    <xpdl:TransitionRef Id="peer-tmo"/>
-                                    <xpdl:TransitionRef Id="document_approval_tra2"/>
-                                </xpdl:TransitionRefs>
-                            </xpdl:Split>
-                        </xpdl:TransitionRestriction>
-                    </xpdl:TransitionRestrictions>
-                    <xpdl:ExtendedAttributes>
-                        <xpdl:ExtendedAttribute Name="VariableToProcess_UPDATE" Value="approvedByReviewer"/>
-                        <xpdl:ExtendedAttribute Name="ReassignToOriginalPerformer"/>
-                        <xpdl:ExtendedAttribute Name="VariableToProcess_UPDATE" Value="reviewerComment"/>
-                    </xpdl:ExtendedAttributes>
-                    <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo BorderColor="0,0,0" FillColor="187,247,190" Height="60" IsVisible="true" LaneId="document_approval_pool1_lan1" ToolId="JaWE" Width="90">
-                            <xpdl:Coordinates XCoordinate="337" YCoordinate="55"/>
-                        </xpdl:NodeGraphicsInfo>
-                    </xpdl:NodeGraphicsInfos>
-                </xpdl:Activity>
                 <xpdl:Activity Id="update_reviewer_comment" Name="Update reviewer comment">
                     <xpdl:Implementation>
                         <xpdl:Task>
@@ -287,15 +253,6 @@ d;</xpdl:DeadlineDuration>
                         <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_ORTHOGONAL" ToolId="JaWE"/>
                     </xpdl:ConnectorGraphicsInfos>
                 </xpdl:Transition>
-                <xpdl:Transition From="review_document" Id="peer-tmo" Name="Peer Review Timed Out" To="update_reviewer_comment">
-                    <xpdl:Condition Type="EXCEPTION">timeout</xpdl:Condition>
-                    <xpdl:Description>This transition is fired when the 60sec deadline expires.</xpdl:Description>
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo FillColor="255,128,255" IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE">
-                            <xpdl:Coordinates XCoordinate="265" YCoordinate="347"/>
-                        </xpdl:ConnectorGraphicsInfo>
-                    </xpdl:ConnectorGraphicsInfos>
-                </xpdl:Transition>
                 <xpdl:Transition From="update_reviewer_comment" Id="publish_doc_tra3" To="final_review_document">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE">
@@ -304,11 +261,6 @@ d;</xpdl:DeadlineDuration>
                     </xpdl:ConnectorGraphicsInfos>
                 </xpdl:Transition>
                 <xpdl:Transition From="final_review_document" Id="document_approval_tra1" To="final_review_document1">
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" ToolId="JaWE"/>
-                    </xpdl:ConnectorGraphicsInfos>
-                </xpdl:Transition>
-                <xpdl:Transition From="review_document" Id="document_approval_tra2" To="review_document1">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" ToolId="JaWE"/>
                     </xpdl:ConnectorGraphicsInfos>
