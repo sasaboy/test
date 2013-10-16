@@ -226,19 +226,6 @@
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                 </xpdl:Activity>
-                <xpdl:Activity Id="document_approval_act1">
-                    <xpdl:Implementation>
-                        <xpdl:No/>
-                    </xpdl:Implementation>
-                    <xpdl:Performers>
-                        <xpdl:Performer>author</xpdl:Performer>
-                    </xpdl:Performers>
-                    <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo BorderColor="0,0,0" FillColor="187,247,190" Height="60" IsVisible="true" LaneId="document_approval_pool1_lan1" ToolId="JaWE" Width="90">
-                            <xpdl:Coordinates XCoordinate="188" YCoordinate="56"/>
-                        </xpdl:NodeGraphicsInfo>
-                    </xpdl:NodeGraphicsInfos>
-                </xpdl:Activity>
             </xpdl:Activities>
             <xpdl:Transitions>
                 <xpdl:Transition From="final_review_document1" Id="publish_doc_Tra7" Name="Transition" To="publish_document">
