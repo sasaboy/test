@@ -173,7 +173,7 @@
                         <xpdl:No/>
                     </xpdl:Implementation>
                     <xpdl:Performers>
-                        <xpdl:Performer>reviewer</xpdl:Performer>
+                        <xpdl:Performer>author</xpdl:Performer>
                     </xpdl:Performers>
                     <xpdl:Deadline Execution="SYNCHR">
                         <xpdl:DeadlineDuration>var d=new java.util.Date();
@@ -197,8 +197,8 @@ d;</xpdl:DeadlineDuration>
                         <xpdl:ExtendedAttribute Name="VariableToProcess_UPDATE" Value="reviewerComment"/>
                     </xpdl:ExtendedAttributes>
                     <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo BorderColor="0,0,0" FillColor="187,247,190" Height="60" IsVisible="true" LaneId="document_approval_pool1_lan2" ToolId="JaWE" Width="90">
-                            <xpdl:Coordinates XCoordinate="106" YCoordinate="49"/>
+                        <xpdl:NodeGraphicsInfo BorderColor="0,0,0" FillColor="187,247,190" Height="60" IsVisible="true" LaneId="document_approval_pool1_lan1" ToolId="JaWE" Width="90">
+                            <xpdl:Coordinates XCoordinate="337" YCoordinate="55"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                 </xpdl:Activity>
@@ -314,6 +314,6 @@ d;</xpdl:DeadlineDuration>
     <xpdl:ExtendedAttributes>
         <xpdl:ExtendedAttribute Name="JaWE_CONFIGURATION" Value="shark"/>
         <xpdl:ExtendedAttribute Name="EDITING_TOOL" Value="Together Workflow Editor"/>
-        <xpdl:ExtendedAttribute Name="EDITING_TOOL_VERSION" Value="5.1-1-20131016-0834"/>
+        <xpdl:ExtendedAttribute Name="EDITING_TOOL_VERSION" Value="5.1-1-20131016-0850"/>
     </xpdl:ExtendedAttributes>
 </xpdl:Package>
