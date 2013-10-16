@@ -88,36 +88,6 @@
             </xpdl:NodeGraphicsInfos>
         </xpdl:Pool>
     </xpdl:Pools>
-    <xpdl:Associations>
-        <xpdl:Association AssociationDirection="To" Id="document_approval_ass3" Source="document_approval_art1" Target="review_document">
-            <xpdl:Object Id="0" Name=""/>
-            <xpdl:ConnectorGraphicsInfos>
-                <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
-            </xpdl:ConnectorGraphicsInfos>
-        </xpdl:Association>
-        <xpdl:Association AssociationDirection="To" Id="document_approval_ass5" Source="document_approval_art1" Target="final_review_document">
-            <xpdl:Object Id="0" Name=""/>
-            <xpdl:ConnectorGraphicsInfos>
-                <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
-            </xpdl:ConnectorGraphicsInfos>
-        </xpdl:Association>
-        <xpdl:Association AssociationDirection="To" Id="document_approval_ass6" Source="document_approval_art1" Target="publish_document">
-            <xpdl:Object Id="0" Name=""/>
-            <xpdl:ConnectorGraphicsInfos>
-                <xpdl:ConnectorGraphicsInfo FillColor="0,0,0" IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
-            </xpdl:ConnectorGraphicsInfos>
-        </xpdl:Association>
-    </xpdl:Associations>
-    <xpdl:Artifacts>
-        <xpdl:Artifact ArtifactType="DataObject" Id="document_approval_art1">
-            <xpdl:DataObject Id="document" Name="Document"/>
-            <xpdl:NodeGraphicsInfos>
-                <xpdl:NodeGraphicsInfo BorderColor="0,0,0" FillColor="255,200,0" Height="40" IsVisible="true" LaneId="document_approval_pool1_lan2" ToolId="JaWE" Width="30">
-                    <xpdl:Coordinates XCoordinate="678" YCoordinate="38"/>
-                </xpdl:NodeGraphicsInfo>
-            </xpdl:NodeGraphicsInfos>
-        </xpdl:Artifact>
-    </xpdl:Artifacts>
     <xpdl:WorkflowProcesses>
         <xpdl:WorkflowProcess AccessLevel="PUBLIC" Id="document_approval" Name="Document approval">
             <xpdl:ProcessHeader DurationUnit="D">
@@ -203,7 +173,7 @@
                         <xpdl:No/>
                     </xpdl:Implementation>
                     <xpdl:Performers>
-                        <xpdl:Performer>author</xpdl:Performer>
+                        <xpdl:Performer>reviewer</xpdl:Performer>
                     </xpdl:Performers>
                     <xpdl:Deadline Execution="SYNCHR">
                         <xpdl:DeadlineDuration>var d=new java.util.Date();
@@ -227,8 +197,8 @@ d;</xpdl:DeadlineDuration>
                         <xpdl:ExtendedAttribute Name="VariableToProcess_UPDATE" Value="reviewerComment"/>
                     </xpdl:ExtendedAttributes>
                     <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo BorderColor="0,0,0" FillColor="187,247,190" Height="60" IsVisible="true" LaneId="document_approval_pool1_lan1" ToolId="JaWE" Width="90">
-                            <xpdl:Coordinates XCoordinate="190" YCoordinate="46"/>
+                        <xpdl:NodeGraphicsInfo BorderColor="0,0,0" FillColor="187,247,190" Height="60" IsVisible="true" LaneId="document_approval_pool1_lan2" ToolId="JaWE" Width="90">
+                            <xpdl:Coordinates XCoordinate="106" YCoordinate="49"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                 </xpdl:Activity>
