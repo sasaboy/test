@@ -2,7 +2,7 @@
 <xpdl:Package xmlns:xpdl="http://www.wfmc.org/2008/XPDL2.1" xmlns="http://www.wfmc.org/2008/XPDL2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="leave_request" Name="Leave request" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 http://www.wfmc.org/standards/docs/bpmnxpdl_31.xsd">
     <xpdl:PackageHeader>
         <xpdl:XPDLVersion>2.1</xpdl:XPDLVersion>
-        <xpdl:Vendor>(c) Together Tesswwwamsolutions Co., Ltd.</xpdl:Vendor>
+        <xpdl:Vendor>(c) Together Teamsoluteeions Co., Ltd.</xpdl:Vendor>
         <xpdl:Created>2010-09-11 08:11:51</xpdl:Created>
         <xpdl:Description>Package contains process definitions for handling leave requests.</xpdl:Description>
     </xpdl:PackageHeader>
@@ -645,29 +645,6 @@
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                 </xpdl:Activity>
-                <xpdl:Activity Id="init_user_info" Name="Init user info">
-                    <xpdl:Implementation>
-                        <xpdl:Task>
-                            <xpdl:TaskApplication Id="fill_user_info">
-                                <xpdl:ActualParameters>
-                                    <xpdl:ActualParameter>personalID</xpdl:ActualParameter>
-                                    <xpdl:ActualParameter>leave_days_left</xpdl:ActualParameter>
-                                    <xpdl:ActualParameter>first_name</xpdl:ActualParameter>
-                                    <xpdl:ActualParameter>last_name</xpdl:ActualParameter>
-                                    <xpdl:ActualParameter>email_address</xpdl:ActualParameter>
-                                </xpdl:ActualParameters>
-                            </xpdl:TaskApplication>
-                        </xpdl:Task>
-                    </xpdl:Implementation>
-                    <xpdl:Performers>
-                        <xpdl:Performer>system</xpdl:Performer>
-                    </xpdl:Performers>
-                    <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo FillColor="255,204,204" Height="60" IsVisible="true" LaneId="leave_request_pool1_lan4" ToolId="JaWE" Width="90">
-                            <xpdl:Coordinates XCoordinate="30" YCoordinate="64"/>
-                        </xpdl:NodeGraphicsInfo>
-                    </xpdl:NodeGraphicsInfos>
-                </xpdl:Activity>
                 <xpdl:Activity Id="fill_supervisor_info" Name="Fill supervisor info">
                     <xpdl:Implementation>
                         <xpdl:Task>
@@ -887,11 +864,6 @@
                 <xpdl:Transition From="fill_personell_dpt_person_info" Id="leave_request_tra10" To="fill_personell_dpt_person_info1">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo IsVisible="true" ToolId="JaWE"/>
-                    </xpdl:ConnectorGraphicsInfos>
-                </xpdl:Transition>
-                <xpdl:Transition From="leave_request_act1" Id="leave_request_tra11" To="init_user_info">
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
                     </xpdl:ConnectorGraphicsInfos>
                 </xpdl:Transition>
                 <xpdl:Transition From="leave_request_notification" Id="leave_request_tra12" To="leave_request_act2">
