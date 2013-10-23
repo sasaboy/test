@@ -2,7 +2,7 @@
 <xpdl:Package xmlns:xpdl="http://www.wfmc.org/2008/XPDL2.1" xmlns="http://www.wfmc.org/2008/XPDL2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="leave_request" Name="Leave request" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 http://www.wfmc.org/standards/docs/bpmnxpdl_31.xsd">
     <xpdl:PackageHeader>
         <xpdl:XPDLVersion>2.1</xpdl:XPDLVersion>
-        <xpdl:Vendor>(c) Together Tessamsolutions Co., Ltd.</xpdl:Vendor>
+        <xpdl:Vendor>(c) Together Tesswwwamsolutions Co., Ltd.</xpdl:Vendor>
         <xpdl:Created>2010-09-11 08:11:51</xpdl:Created>
         <xpdl:Description>Package contains process definitions for handling leave requests.</xpdl:Description>
     </xpdl:PackageHeader>
