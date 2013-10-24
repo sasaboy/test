@@ -211,8 +211,8 @@
                         <xpdl:ExtendedAttribute Name="VariableToProcess_UPDATE" Value="reviewerComment"/>
                     </xpdl:ExtendedAttributes>
                     <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo BorderColor="0,0,0" FillColor="255,229,124" Height="43" IsVisible="true" LaneId="document_approval_pool1_lan2" ToolId="JaWE" Width="43">
-                            <xpdl:Coordinates XCoordinate="402" YCoordinate="19"/>
+                        <xpdl:NodeGraphicsInfo BorderColor="0,0,0" FillColor="255,229,124" Height="43" IsVisible="true" LaneId="document_approval_pool1_lan1" ToolId="JaWE" Width="43">
+                            <xpdl:Coordinates XCoordinate="335" YCoordinate="29"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                 </xpdl:Activity>
