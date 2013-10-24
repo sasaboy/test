@@ -2,7 +2,7 @@
 <xpdl:Package xmlns:xpdl="http://www.wfmc.org/2008/XPDL2.1" xmlns="http://www.wfmc.org/2008/XPDL2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="document_approval" Name="Document approval" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 http://www.wfmc.org/standards/docs/bpmnxpdl_31.xsd">
     <xpdl:PackageHeader>
         <xpdl:XPDLVersion>2.1</xpdl:XPDLVersion>
-        <xpdl:Vendor>(c) bs sadddsa Co., Ltd.</xpdl:Vendor>
+        <xpdl:Vendor>(c) Togsssether Teamwwwwwwwsolutions Co., Ltd.</xpdl:Vendor>
         <xpdl:Created>2010-09-13 08:52:23</xpdl:Created>
     </xpdl:PackageHeader>
     <xpdl:RedefinableHeader>
@@ -212,7 +212,7 @@
                     </xpdl:ExtendedAttributes>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo BorderColor="0,0,0" FillColor="255,229,124" Height="43" IsVisible="true" LaneId="document_approval_pool1_lan2" ToolId="JaWE" Width="43">
-                            <xpdl:Coordinates XCoordinate="402" YCoordinate="19"/>
+                            <xpdl:Coordinates XCoordinate="385" YCoordinate="108"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                 </xpdl:Activity>
@@ -264,7 +264,7 @@
         </xpdl:WorkflowProcess>
     </xpdl:WorkflowProcesses>
     <xpdl:ExtendedAttributes>
-        <xpdl:ExtendedAttribute Name="JaWE_CONFIGURATION" Value="default"/>
+        <xpdl:ExtendedAttribute Name="JaWE_CONFIGURATION" Value="shark"/>
         <xpdl:ExtendedAttribute Name="EDITING_TOOL" Value="Together Workflow Editor"/>
         <xpdl:ExtendedAttribute Name="EDITING_TOOL_VERSION" Value="4.0-1-20110124-0813"/>
     </xpdl:ExtendedAttributes>
