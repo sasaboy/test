@@ -1,25 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
-    Together Workflow Editor
-    Copyright (C) 2011 Together Teamsolutions Co., Ltd.
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or 
-    (at your option) any later version.
- 
-    This program is distributed in the hope that it will be useful, 
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
-    GNU General Public License for more details.
- 
-    You should have received a copy of the GNU General Public License
-    along with this program. If not, see http://www.gnu.org/licenses
--->
 <xpdl:Package xmlns:xpdl="http://www.wfmc.org/2008/XPDL2.1" xmlns="http://www.wfmc.org/2008/XPDL2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="leave_request" Name="Leave request" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 http://www.wfmc.org/standards/docs/bpmnxpdl_31.xsd">
     <xpdl:PackageHeader>
         <xpdl:XPDLVersion>2.1</xpdl:XPDLVersion>
-        <xpdl:Vendor>(c) Together Teamsolutions Co., Ltd.</xpdl:Vendor>
+        <xpdl:Vendor>(c) Together Teamsoluteewwwions Co., Ltd.</xpdl:Vendor>
         <xpdl:Created>2010-09-11 08:11:51</xpdl:Created>
         <xpdl:Description>Package contains process definitions for handling leave requests.</xpdl:Description>
     </xpdl:PackageHeader>
@@ -310,12 +293,6 @@
         </xpdl:Pool>
     </xpdl:Pools>
     <xpdl:Associations>
-        <xpdl:Association AssociationDirection="From" Id="leave_request_ass1" Source="submit_leave_request" Target="leave_request_doc">
-            <xpdl:Object Id="0" Name=""/>
-            <xpdl:ConnectorGraphicsInfos>
-                <xpdl:ConnectorGraphicsInfo IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
-            </xpdl:ConnectorGraphicsInfos>
-        </xpdl:Association>
         <xpdl:Association AssociationDirection="To" Id="leave_request_ass2" Source="leave_request_doc" Target="review_leave_request">
             <xpdl:Object Id="0" Name=""/>
             <xpdl:ConnectorGraphicsInfos>
@@ -329,12 +306,6 @@
             </xpdl:ConnectorGraphicsInfos>
         </xpdl:Association>
         <xpdl:Association AssociationDirection="None" Id="leave_request_ass4" Source="send_mail" Target="comment_configure_workflow_engine">
-            <xpdl:Object Id="0" Name=""/>
-            <xpdl:ConnectorGraphicsInfos>
-                <xpdl:ConnectorGraphicsInfo IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
-            </xpdl:ConnectorGraphicsInfos>
-        </xpdl:Association>
-        <xpdl:Association AssociationDirection="None" Id="leave_request_ass5" Source="comment_upload_doc" Target="submit_leave_request">
             <xpdl:Object Id="0" Name=""/>
             <xpdl:ConnectorGraphicsInfos>
                 <xpdl:ConnectorGraphicsInfo IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
@@ -489,42 +460,6 @@
                 </xpdl:DataField>
             </xpdl:DataFields>
             <xpdl:Activities>
-                <xpdl:Activity Id="submit_leave_request" Name="Submit leave request">
-                    <xpdl:Description>The leave request submission.</xpdl:Description>
-                    <xpdl:Implementation>
-                        <xpdl:No/>
-                    </xpdl:Implementation>
-                    <xpdl:Deadline Execution="SYNCHR">
-                        <xpdl:DeadlineDuration>var d=new java.util.Date();
-d.setTime(shark_activity_created_time.getTime()+default_deadline_time);
-d;</xpdl:DeadlineDuration>
-                        <xpdl:ExceptionName>end_process</xpdl:ExceptionName>
-                    </xpdl:Deadline>
-                    <xpdl:TransitionRestrictions>
-                        <xpdl:TransitionRestriction>
-                            <xpdl:Split Type="Exclusive">
-                                <xpdl:TransitionRefs>
-                                    <xpdl:TransitionRef Id="leave_request_Tra22"/>
-                                    <xpdl:TransitionRef Id="leave_request_tra1"/>
-                                </xpdl:TransitionRefs>
-                            </xpdl:Split>
-                        </xpdl:TransitionRestriction>
-                    </xpdl:TransitionRestrictions>
-                    <xpdl:ExtendedAttributes>
-                        <xpdl:ExtendedAttribute Name="VariableToProcess_VIEW" Value="personalID"/>
-                        <xpdl:ExtendedAttribute Name="VariableToProcess_VIEW" Value="first_name"/>
-                        <xpdl:ExtendedAttribute Name="VariableToProcess_VIEW" Value="last_name"/>
-                        <xpdl:ExtendedAttribute Name="VariableToProcess_UPDATE" Value="leave_reason"/>
-                        <xpdl:ExtendedAttribute Name="VariableToProcess_UPDATE" Value="leave_from_date"/>
-                        <xpdl:ExtendedAttribute Name="VariableToProcess_UPDATE" Value="leave_to_date"/>
-                        <xpdl:ExtendedAttribute Name="VariableToProcess_UPDATE" Value="email_address"/>
-                    </xpdl:ExtendedAttributes>
-                    <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo FillColor="187,247,190" Height="60" IsVisible="true" LaneId="leave_request_pool1_lan1" ToolId="JaWE" Width="90">
-                            <xpdl:Coordinates XCoordinate="11" YCoordinate="64"/>
-                        </xpdl:NodeGraphicsInfo>
-                    </xpdl:NodeGraphicsInfos>
-                </xpdl:Activity>
                 <xpdl:Activity Id="review_leave_request" Name="Review leave request">
                     <xpdl:Description>Approve/deny employee's request.</xpdl:Description>
                     <xpdl:Limit>30</xpdl:Limit>
@@ -707,29 +642,6 @@ d;</xpdl:DeadlineDuration>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo FillColor="255,229,124" Height="43" IsVisible="true" LaneId="leave_request_pool1_lan4" ToolId="JaWE" Width="43">
                             <xpdl:Coordinates XCoordinate="156" YCoordinate="554"/>
-                        </xpdl:NodeGraphicsInfo>
-                    </xpdl:NodeGraphicsInfos>
-                </xpdl:Activity>
-                <xpdl:Activity Id="init_user_info" Name="Init user info">
-                    <xpdl:Implementation>
-                        <xpdl:Task>
-                            <xpdl:TaskApplication Id="fill_user_info">
-                                <xpdl:ActualParameters>
-                                    <xpdl:ActualParameter>personalID</xpdl:ActualParameter>
-                                    <xpdl:ActualParameter>leave_days_left</xpdl:ActualParameter>
-                                    <xpdl:ActualParameter>first_name</xpdl:ActualParameter>
-                                    <xpdl:ActualParameter>last_name</xpdl:ActualParameter>
-                                    <xpdl:ActualParameter>email_address</xpdl:ActualParameter>
-                                </xpdl:ActualParameters>
-                            </xpdl:TaskApplication>
-                        </xpdl:Task>
-                    </xpdl:Implementation>
-                    <xpdl:Performers>
-                        <xpdl:Performer>system</xpdl:Performer>
-                    </xpdl:Performers>
-                    <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo FillColor="255,204,204" Height="60" IsVisible="true" LaneId="leave_request_pool1_lan4" ToolId="JaWE" Width="90">
-                            <xpdl:Coordinates XCoordinate="30" YCoordinate="64"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                 </xpdl:Activity>
@@ -922,13 +834,6 @@ d;</xpdl:DeadlineDuration>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                 </xpdl:Transition>
-                <xpdl:Transition From="submit_leave_request" Id="leave_request_Tra22" To="check_leave_days">
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE">
-                            <xpdl:Coordinates XCoordinate="344" YCoordinate="165"/>
-                        </xpdl:ConnectorGraphicsInfo>
-                    </xpdl:ConnectorGraphicsInfos>
-                </xpdl:Transition>
                 <xpdl:Transition From="update_leave_days" Id="leave_request_Tra23" To="fill_message_text">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
@@ -956,20 +861,9 @@ d;</xpdl:DeadlineDuration>
                         <xpdl:ConnectorGraphicsInfo IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
                     </xpdl:ConnectorGraphicsInfos>
                 </xpdl:Transition>
-                <xpdl:Transition From="submit_leave_request" Id="leave_request_tra1" To="leave_request_act3">
-                    <xpdl:Condition Type="DEFAULTEXCEPTION"/>
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
-                    </xpdl:ConnectorGraphicsInfos>
-                </xpdl:Transition>
                 <xpdl:Transition From="fill_personell_dpt_person_info" Id="leave_request_tra10" To="fill_personell_dpt_person_info1">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo IsVisible="true" ToolId="JaWE"/>
-                    </xpdl:ConnectorGraphicsInfos>
-                </xpdl:Transition>
-                <xpdl:Transition From="leave_request_act1" Id="leave_request_tra11" To="init_user_info">
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
                     </xpdl:ConnectorGraphicsInfos>
                 </xpdl:Transition>
                 <xpdl:Transition From="leave_request_notification" Id="leave_request_tra12" To="leave_request_act2">
@@ -1005,13 +899,6 @@ d;</xpdl:DeadlineDuration>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                 </xpdl:Transition>
-                <xpdl:Transition From="init_user_info" Id="leave_request_tra6" To="submit_leave_request">
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE">
-                            <xpdl:Coordinates XCoordinate="302" YCoordinate="130"/>
-                        </xpdl:ConnectorGraphicsInfo>
-                    </xpdl:ConnectorGraphicsInfos>
-                </xpdl:Transition>
                 <xpdl:Transition From="fill_message_text" Id="leave_request_tra7" To="send_mail">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo IsVisible="true" Style="NO_ROUTING_SPLINE" ToolId="JaWE"/>
@@ -1033,6 +920,6 @@ d;</xpdl:DeadlineDuration>
     <xpdl:ExtendedAttributes>
         <xpdl:ExtendedAttribute Name="JaWE_CONFIGURATION" Value="shark"/>
         <xpdl:ExtendedAttribute Name="EDITING_TOOL" Value="Together Workflow Editor"/>
-        <xpdl:ExtendedAttribute Name="EDITING_TOOL_VERSION" Value="4.9-1-20130211-1113"/>
+        <xpdl:ExtendedAttribute Name="EDITING_TOOL_VERSION" Value="5.1-1-20131022-1028"/>
     </xpdl:ExtendedAttributes>
 </xpdl:Package>
